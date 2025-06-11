@@ -16,11 +16,13 @@ export default async function Home() {
         redirect('/welcome')
     }
     return (
-        <div className="text-white flex justify-center items-center min-h-screen">
-            <div className="bg-gray-600 px-10 py-5 flex flex-col gap-2">
-                {JSON.stringify(session)}
-                <SignOut />
+        <div className="text-white flex justify-center items-center text-wrap min-h-screen">
+            <div className="bg-gray-600 px-4 py-2">
+                {JSON.stringify(session.user)}
             </div>
+                <div className={"fixed top-5 right-5"}>
+                    <SignOut />
+                </div>
         </div>        
     );
 }

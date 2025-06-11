@@ -28,7 +28,7 @@ function Login() {
             <InputBox refrence={(e) => ref.current[0] = e} placeHolder={"Name"} typeInput={"text"}/>
             <InputBox refrence={(e) => ref.current[1] = e} placeHolder={"Email"} typeInput={"text"}/>
             <InputBox refrence={(e) => ref.current[2] = e} placeHolder={"Password"} typeInput={"password"}/>
-            <button onClick={onSubmit} className="outline-none h-full w-full px-5 py-2 bg-red-800  text-lg rounded-sm focus:ring-2 ring-red-600/40 transition-all duration-500
+            <button onClick={onSubmit} className="cursor-pointer outline-none h-full w-full px-5 py-2 bg-red-800  text-lg rounded-sm focus:ring-2 ring-red-600/40 transition-all duration-500
                 hover:ring-4">Sign In</button>
         </div>
     )
