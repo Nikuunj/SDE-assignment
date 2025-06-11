@@ -19,7 +19,7 @@ function Login() {
             email: email,
             password: password,
             redirect: true,
-            callbackUrl: 'http://localhost:3000'
+            callbackUrl:  process.env.NEXTAUTH_URL ?? 'http://localhost:3000'
         })
     }
 
