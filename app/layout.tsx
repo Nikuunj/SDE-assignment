@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { DotBackgroundDemo } from "@/components/DotBackgroundDemo";
+import { Providers } from "@/components/Provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +26,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <style>
+            {`@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");`}
+        </style>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased normal text-base tracking-wide`}
       >
-        {children}
+        <Providers>
+          <DotBackgroundDemo />
+          {children}
+        </Providers>
       </body>
     </html>
   );
