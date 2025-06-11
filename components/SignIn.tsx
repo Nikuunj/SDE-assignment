@@ -1,12 +1,12 @@
 "use client"
 
-import { signIn, signOut } from "next-auth/react"
+import { signIn } from "next-auth/react"
 
 function SignIn() {
   return (
     <div>
-        <button className="bg-red-300 px-5 py-2 rounded-lg m-3 z-50" onClick={() => signIn()}>Sign in</button>
-        <button className="bg-red-300 px-5 py-2 rounded-lg m-3" onClick={() => signOut()}>Sign out</button>
+        <button className="h-full w-full px-10 py-3 outline-none bg-red-800  text-2xl rounded-lg focus:ring-2 ring-red-600/40 transition-all duration-500
+                hover:ring-4 z-40"   onClick={() => signIn()}>Get Started</button>
     </div>
   )
 }

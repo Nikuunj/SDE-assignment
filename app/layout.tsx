@@ -32,7 +32,7 @@ export default function RootLayout({
         </style>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased normal text-base tracking-wide`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased normal text-base tracking-wide text-black dark:text-white`}
       >
         <Providers>
           <DotBackgroundDemo />
