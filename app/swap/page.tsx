@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { mockItems, SwipeItem } from '@/lib/utils';
 import { SwipeCard } from '@/components/SwipeCard';
@@ -71,9 +72,11 @@ const SwipeFeed: React.FC = () => {
                 <div className="space-y-3">
                   {savedItems.map((item) => (
                     <div key={item.id} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.title}
+                        width={48}
+                        height={48}
                         className="w-12 h-12 object-cover rounded-lg"
                       />
                       <div className="flex-1 text-black">
@@ -93,7 +96,7 @@ const SwipeFeed: React.FC = () => {
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🎉</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">All done!</h3>
-              <p className="text-gray-600">You've seen all items. Reset to see them again.</p>
+              <p className="text-gray-600">You&apos;ve seen all items. Reset to see them again.</p>
             </div>
           ) : (
             items.slice(0, 3).map((item, index) => (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useMotionValue, useTransform, PanInfo } from 'framer-motion';
 import { SwipeItem } from '@/lib/utils';
+import Image from 'next/image';
 
 
 export const SwipeCard: React.FC<{
@@ -40,11 +41,13 @@ export const SwipeCard: React.FC<{
     >
       <div className="w-full h-full  bg-white rounded-lg shadow-2xl overflow-hidden">
         <div className="relative h-96/151 overflow-hidden">
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full h-full object-cover select-none"
-          />
+           <Image
+              src={item.image}
+              alt={item.title}
+              width={48}
+              height={48}
+              className="w-12 h-12 object-cover rounded-lg"
+            />
           <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
             {item.brand}
           </div>
