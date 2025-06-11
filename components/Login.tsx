@@ -26,7 +26,7 @@ function Login() {
 
     return (
         <form onSubmit={onSubmit}>
-            <BackgroundGradient className="rounded-lg max-w-sm px-2 py-8 transition-all duration-300 sm:px-10 sm:py-15 bg-black flex flex-col gap-3">
+            <BackgroundGradient className="rounded-lg max-w-sm px-2 py-8 transition-all duration-300 sm:px-10 sm:py-15 bg-zinc-100 dark:bg-black flex flex-col gap-3 text-black dark:text-white">
                 <div className="text-center text-2xl font-bold">Login Page</div>
                 <InputBox refrence={(e) => ref.current[0] = e} placeHolder={"Name"} typeInput={"text"}/>
                 <InputBox refrence={(e) => ref.current[1] = e} placeHolder={"Email"} typeInput={"text"}/>

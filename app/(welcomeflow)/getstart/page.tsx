@@ -5,7 +5,7 @@ import SignIn from "@/components/SignIn"
 function page() {
   return (
     <div className="flex items-center min-h-screen justify-center">
-        <FancyText text="Create your thrift profile and start swiping" />
+        <FancyText words="Create your thrift profile and start swiping" />
         <div className="fixed bottom-8 right-5 ">
             <SignIn />
         </div>
