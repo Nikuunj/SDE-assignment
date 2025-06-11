@@ -44,7 +44,7 @@ function FancyText({ words, className,filter = true, duration = 0.5, }: { words:
     };
 
     return (
-        <div className={cn("text-4xl font-bold  sm:text-6xl", className)}>
+        <div className={cn(" font-bold text-4xl sm:text-6xl", className)}>
             <div className="leading-11 sm:leading-15">
                 {renderWords()}
             </div>
