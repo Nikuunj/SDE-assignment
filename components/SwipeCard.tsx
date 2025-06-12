@@ -39,14 +39,15 @@ export const SwipeCard: React.FC<{
       onDragEnd={handleDragEnd}
       whileDrag={{ scale: 1.1 }}
     >
-      <div className="w-full h-full  bg-white rounded-lg shadow-2xl overflow-hidden">
+      <div className="w-full h-full  bg-white dark:bg-zinc-900  shadow-red-700/60 rounded-lg shadow-2xl overflow-hidden">
         <div className="relative h-96/151 overflow-hidden">
            <Image
               src={item.image}
               alt={item.title}
-              width={48}
-              height={48}
-              className="w-12 h-12 object-cover rounded-lg"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={index === 0} // Only prioritize the first image
             />
           <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
             {item.brand}
@@ -58,7 +59,7 @@ export const SwipeCard: React.FC<{
         </div>
         <div className="p-4 space-y-5 ">
           <div className='space-y-3'>
-            <div className="font-bold text-3xl text-gray-900 ">{item.title} </div>
+            <div className="font-bold text-3xl text-gray-900 dark:text-zinc-200 ">{item.title} </div>
             <p className="text-2xl font-bold text-green-600">${item.price}</p>
           </div>
           <div className="flex flex-wrap gap-2">

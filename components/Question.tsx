@@ -40,11 +40,11 @@ function Question() {
     
     if (isComplete) {
         return (
-            <div className="p-0 sm:p-8 bg-white/6 flex flex-col justify-center items-center gap-3 text-center">
+            <div className="p-0 sm:p-8 bg-black/6 dark:bg-white/6flex flex-col justify-center items-center space-y-3 text-center">
                 <>
                     <FancyText words={"All set. Let's build your Thursday."} />
                 </>
-                    <div className="text-sm text-zinc-400">
+                    <div className="text-sm dark:text-zinc-400 text-zinc-700">
                         <p>Your selected vibes:</p>
                         <div className="flex flex-wrap gap-2 justify-center mt-2">
                             {selectedVibes.map((vibe, index) => (
@@ -67,7 +67,7 @@ function Question() {
     }
     
     return (
-        <div className="p-0 sm:p-8 bg-white/6 flex flex-col justify-center items-center gap-3">
+        <div className="p-0 sm:p-8 bg-black/6 dark:bg-white/6 flex flex-col justify-center items-center gap-3">
             <FancyText words={"What best describes your vibe today?"} />
             <div className="space-y-3 mb-6 flex justify-center items-center">
                 <div className="grid grid-cols-2 gap-2">
@@ -79,7 +79,7 @@ function Question() {
                     className={`max-w-44 px-3 sm:px-6 py-2.5 text-sm sm:text-base  rounded-lg  transition-all  hover:ring-red-600/30 hover:ring-4 duration-300 font-medium ${
                         selectedVibes.includes(vibe)
                         ? 'bg-red-600 text-white shadow-md '
-                        : 'bg-white text-black  hover:bg-red-50'
+                        : 'dark:bg-white dark:text-black  hover:bg-red-400 bg-black/90 text-white'
                     }`}
                     >
                         {vibe}
@@ -89,7 +89,7 @@ function Question() {
             </div>
             
             <div className="text-center mb-4">
-                <p className="text-sm text-gray-300">
+                <p className="text-sm dark:text-gray-300 text-gray-800">
                     Select 1-3 options ({selectedVibes.length}/3 selected)
                 </p>
             </div>
